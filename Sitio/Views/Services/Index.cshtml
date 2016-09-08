@@ -1,0 +1,39 @@
+﻿@model Sitio.Models.ServiceModel
+<main id="main">
+	<section class="container container-block	">
+		<h1>@Model.ServiceName</h1>
+		<div class="row">
+			<div class="col-xs-12 .col-sm-10" id="content">
+				<article class="blog-post">
+					<p>
+						@Model.LongDesc
+					</p>
+
+				</article>
+
+			</div>
+		</div>
+	</section>
+	@Html.Partial("ContactUs", Model.ContactModel)
+</main>
+
+<style type="text/css">
+	.blog-post {
+		margin-top: 32px;
+	}
+
+		.blog-post p {
+			margin: 20px 0 17px;
+			font-size: 18px;
+			text-align: justify;
+		}
+
+	.news-posts {
+		padding-top: 189px;
+		padding-bottom: 78px;
+	}
+
+	#main {
+		padding-top: 100px;
+	}
+</style>

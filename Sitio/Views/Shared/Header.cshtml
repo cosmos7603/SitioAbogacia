@@ -1,0 +1,93 @@
+﻿
+@using Sitio.Helpers
+<header id="header-v2" class="">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="header-block">
+					<a href="#" class="nav-opener2 visible-xs"><span class="icon-menu"></span>menu</a>
+					<a href="#" class="icon-phone2 visible-xs"><span class="icon-phone"></span></a>
+					<!-- logo of the page -->
+					<div class="logo">
+						<h3>ESTUDIO LOPEZ GIACOMELLI Y ASOC.</h3>
+
+
+						@*<img class="logo-home" src="~/images/logo-white.png" height="63" width="247" alt="LAW FIRM">
+							<img class="logo-img" src="~/images/logo.png" height="70" width="197" alt="LAW FIRM">*@
+					</div>
+				</div>
+				<div class="header-content text-right">
+					<a href="#" class="opener"><span class="icon-close"></span>close</a>
+					<div class="content-outer">
+						<div class="holder">
+							<ul class="top-nav">
+								<li class="tel"><a href="tel:+54 11 6198-0179" class="tel"><span class="icon-phone"></span> +54 11 6198-0179</a></li>
+								@*<li class="email"><a href="#contactus" class="smoothanchor"><span class="icon-email"></span> Contactenos</a></li>*@
+							</ul>
+							<!-- nav2 of the page -->
+							<nav id="nav2">
+								<ul class="list-inline" id="navLinks">
+
+
+									@if (@Html.IsCurrentController("Home"))
+									{
+										<li id="indexLink" class=@Html.IsSelected("Index", "Home")>
+											<a href="#wrapper" class="smoothanchor" onclick="selectThis()">Inicio</a>
+										</li>
+									}
+									else
+									{
+										<li id="indexLink" class=@Html.IsSelected("Index", "Home")>
+											<a href="@Url.Action("Index", "Home")" onclick="selectThis()">Inicio</a>
+										</li>
+									}
+
+
+									<li id="aboutUs" class=@Html.IsSelected("Index", "AboutUs")>
+										<a href="@Url.Action("Index", "AboutUs")" onclick="selectThis()">Quienes somos</a>
+									</li>
+
+									@if (@Html.IsCurrentController("Home"))
+									{
+										<li id="servicesLink">
+											<a href="#services" class="smoothanchor" onclick="selectThis()">Servicios</a>
+										</li>
+										<li id="faqLink">
+											<a href="#faq" class="smoothanchor" onclick="selectThis()">Preguntas frecuentes</a>
+										</li>
+
+									}
+									else
+									{
+										<li>
+											<a href="@Url.Action("Index", "Home")#services" onclick="selectThis()">Servicios</a>
+										</li>
+										<li>
+											<a href="@Url.Action("Index", "Home")#faq" onclick="selectThis()">Preguntas frecuentes</a>
+										</li>
+									}
+
+									<li>
+										<a href="#contactus" class="smoothanchor" onclick="selectThis()">Contactenos</a>
+									</li>
+
+
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+
+<script type="text/javascript">
+
+	function selectThis(elem)
+	{
+		$("#navLinks li").removeClass("active");
+		return true;
+	}
+
+</script>
