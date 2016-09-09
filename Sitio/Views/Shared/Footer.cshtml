@@ -1,12 +1,11 @@
 ﻿		<!-- footer-holder of the Page -->
 <div class="container footer-holder">
 	<aside class="row aside-block">
-		<section class="col-sm-6 col-md-3 col-xs-12 column new-col">
-			<h2>Contactenos</h2>
+		<section class="col-sm-6 col-md-4 col-xs-12 column new-col">
 			<div class="news-articles address">
 				<div class="news-column">
 					<span class="txt">Dirección:</span>
-					<address class="address-box">Gorriti 300,Capital Federal, Argentina</address>
+					<address class="address-box">Juana Manso 1113, 7mo piso,Capital Federal, Argentina</address>
 				</div>
 				<div class="news-column">
 					<span class="txt">Teléfono:</span>
@@ -14,20 +13,20 @@
 						<a class="tel" href="tel:+54116198-0179">+54 11 6198-0179</a> - Oficina
 						<br>
 						<!--<a href="mailo:&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#064;&#115;&#105;&#116;&#101;&#110;&#097;&#109;&#101;&#046;&#099;&#111;&#109;">&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#064;&#115;&#105;&#116;&#101;&#110;&#097;&#109;&#101;&#046;&#099;&#111;&#109;</a>-->
-						<a href="mailo:sebastianlopez@gmail.com">sebastianlopez@gmail.com</a>
+						<a href="mailo:sebastianlopezgiacomelli@gmail.com">sebastianlopezgiacomelli@gmail.com</a>
 					</address>
 				</div>
-				<div class="news-column">
+				@*<div class="news-column">
 					<span class="txt">Siganos:</span>
 					<ul class="footer-socials list-inline">
 						<li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
 						<li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
 						<li><a href="#"><i class="fa fa-google-plus-square"></i></a></li>
 					</ul>
-				</div>
+				</div>*@
 			</div>
 		</section>
-		<section class="col-sm-6 col-md-3 col-xs-12 column new-col">
+		<section class="col-md-8 column new-col">
 			<div class="site-map" id="map">
 			</div>
 		</section>
@@ -45,4 +44,79 @@
 		</div>
 	</div>
 </footer>
-@*<div class="pre-loader"><span class="preloader1"></span></div>*@
+<div class="pre-loader"><span class="preloader1"></span></div>
+
+
+<style type="text/css">
+	.footer-holder .site-map {
+		min-height: 298px;
+		margin: 0 0 61px;
+		/* margin-left: 70px;*/
+	}
+
+	.site-map {
+		padding: 50px 0;
+		min-height: 339px;
+	}
+
+	.news-articles.address .news-column .txt {
+		width: 74px;
+	}
+	/*.news-column .address-box {
+		width: 73px !important;
+	}*/
+</style>
+
+<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic%7cRoboto:400,100italic,100,300,300italic,400italic,500,500italic,700,700italic,900,900italic%7cOpen+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false&key=AIzaSyCwun6S8hZFgIZEUlsp4t9p8nbnNRkU4aU"></script>
+<script type="text/javascript">
+	var lat;
+	var lng;
+	var map;
+	var styles = [{ "stylers": [{ "saturation": -100 }, { "gamma": 1 }] }, { "elementType": "labels.text.stroke", "stylers": [{ "visibility": "off" }] }, { "featureType": "poi.business", "elementType": "labels.text", "stylers": [{ "visibility": "off" }] }, { "featureType": "poi.business", "elementType": "labels.icon", "stylers": [{ "visibility": "off" }] }, { "featureType": "poi.place_of_worship", "elementType": "labels.text", "stylers": [{ "visibility": "off" }] }, { "featureType": "poi.place_of_worship", "elementType": "labels.icon", "stylers": [{ "visibility": "off" }] }, { "featureType": "road", "elementType": "geometry", "stylers": [{ "visibility": "simplified" }] }, { "featureType": "water", "stylers": [{ "visibility": "on" }, { "saturation": 50 }, { "gamma": 0 }, { "hue": "#50a5d1" }] }, { "featureType": "administrative.neighborhood", "elementType": "labels.text.fill", "stylers": [{ "color": "#333333" }] }, { "featureType": "road.local", "elementType": "labels.text", "stylers": [{ "weight": 0.5 }, { "color": "#333333" }] }, { "featureType": "transit.station", "elementType": "labels.icon", "stylers": [{ "gamma": 1 }, { "saturation": 50 }] }];
+
+	//type your address after "address="
+	jQuery.getJSON('https://maps.googleapis.com/maps/api/geocode/json?address=buenos aires, juana manso street, 1113b&sensor=false&key=AIzaSyCwun6S8hZFgIZEUlsp4t9p8nbnNRkU4aU', function (data)
+	{
+		lat = data.results[0].geometry.location.lat;
+		lng = data.results[0].geometry.location.lng;
+	}).complete(function ()
+	{
+		dxmapLoadMap();
+	});
+
+	function attachSecretMessage(marker, message)
+	{
+		var infowindow = new google.maps.InfoWindow(
+			{
+				content: message
+			});
+		google.maps.event.addListener(marker, 'click', function ()
+		{
+			infowindow.open(map, marker);
+		});
+	}
+
+	window.dxmapLoadMap = function ()
+	{
+		var center = new google.maps.LatLng(lat, lng);
+		var settings = {
+			mapTypeId: google.maps.MapTypeId.ROADMAP,
+			zoom: 16,
+			draggable: false,
+			scrollwheel: false,
+			center: center,
+			styles: styles
+		};
+		map = new google.maps.Map(document.getElementById('map'), settings);
+
+		var marker = new google.maps.Marker({
+			position: center,
+			title: 'Map title',
+			map: map
+		});
+		marker.setTitle('Map title'.toString());
+		//type your map title and description here
+		attachSecretMessage(marker, '<h3>Map title</h3>Map HTML description');
+	}
+</script>
