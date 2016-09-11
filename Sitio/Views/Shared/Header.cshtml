@@ -31,15 +31,15 @@
 
 									@if (@Html.IsCurrentController("Home"))
 									{
-										<li id="indexLink" class=@Html.IsSelected("Index", "Home")>
-											<a href="#wrapper" class="smoothanchor" onclick="selectThis()">Inicio</a>
-										</li>
+									<li id="indexLink" class=@Html.IsSelected("Index", "Home")>
+										<a href="#wrapper" class="smoothanchor" onclick="selectThis()">Inicio</a>
+									</li>
 									}
 									else
 									{
-										<li id="indexLink" class=@Html.IsSelected("Index", "Home")>
-											<a href="@Url.Action("Index", "Home")" onclick="selectThis()">Inicio</a>
-										</li>
+									<li id="indexLink" class=@Html.IsSelected("Index", "Home")>
+										<a href="@Url.Action("Index", "Home")" onclick="selectThis()">Inicio</a>
+									</li>
 									}
 
 
@@ -49,22 +49,22 @@
 
 									@if (@Html.IsCurrentController("Home"))
 									{
-										<li id="servicesLink">
-											<a href="#services" class="smoothanchor" onclick="selectThis()">Servicios</a>
-										</li>
-										<li id="faqLink">
-											<a href="#faq" class="smoothanchor" onclick="selectThis()">Preguntas frecuentes</a>
-										</li>
+									<li id="servicesLink">
+										<a href="#services" class="smoothanchor" onclick="selectThis()">Servicios</a>
+									</li>
+									<li id="faqLink">
+										<a href="#faq" class="smoothanchor" onclick="selectThis()">Preguntas frecuentes</a>
+									</li>
 
 									}
 									else
 									{
-										<li>
-											<a href="@Url.Action("Index", "Home")#services" onclick="selectThis()">Servicios</a>
-										</li>
-										<li>
-											<a href="@Url.Action("Index", "Home")#faq" onclick="selectThis()">Preguntas frecuentes</a>
-										</li>
+									<li>
+										<a href="@Url.Action("Index", "Home")#services" onclick="selectThis()">Servicios</a>
+									</li>
+									<li>
+										<a href="@Url.Action("Index", "Home")#faq" onclick="selectThis()">Preguntas frecuentes</a>
+									</li>
 									}
 
 									<li>
@@ -104,6 +104,14 @@
 
 	#header-v2.fixed-position .logo {
 		width: 190px;
+	}
+
+
+	@@media only screen and (max-width: 500px) {
+		.home #header-v2 h3 {
+			color: #d95b43;
+			font-size: 14px;
+		}
 	}
 </style>
 

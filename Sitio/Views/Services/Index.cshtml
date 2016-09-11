@@ -28,7 +28,7 @@
 			<h2>@Model.ServiceName</h2>
 			<div class="col-xs-12" id="content">
 				<article class="blog-post">
-					@Model.LongDesc
+					@Html.Raw(@Model.LongDesc)
 				</article>
 			</div>
 		</div>
