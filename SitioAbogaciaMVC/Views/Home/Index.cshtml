@@ -1,0 +1,853 @@
+﻿
+@model Site.Models.ContactModel
+
+<html>
+<head>
+	<!-- set the encoding of your site -->
+	<meta charset="utf-8">
+	<!-- set the viewport width and initial-scale on mobile devices -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>LAW FIRM</title>
+	<!-- include the site stylesheet -->
+	@Styles.Render("~/css/font-awesome.min.css")
+	@Styles.Render("~/css/fancybox.css")
+	@Styles.Render("~/css/bootstrap.css")
+	@Styles.Render("~/css/bootstrap-dialog.min.css")
+	@Styles.Render("~/css/all.css")
+	@Styles.Render("~/css/jQueryUI/jquery-ui-1.10.4.custom.min.css")
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic%7cRoboto:400,100italic,100,300,300italic,400italic,500,500italic,700,700italic,900,900italic%7cOpen+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+	<style type="text/css">
+		.inline li {
+			display: inline;
+		}
+
+		.inline {
+			margin-top: 30px;
+			margin-bottom: 10px;
+			font-size: 17px;
+		}
+
+
+		#header ul li {
+			margin-right: 15px;
+		}
+
+		.ProfessionalTitle {
+			text-transform: capitalize !important;
+		}
+
+		.header-row {
+		}
+	</style>
+
+</head>
+<body>
+	<!-- main container of all the page elements -->
+	<div id="wrapper" class="home">
+		<!-- header of the page -->
+		<header id="header-v2" class="">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12">
+						<div class="header-block">
+							<a href="#" class="nav-opener2 visible-xs"><span class="icon-menu"></span>menu</a>
+							<a href="#" class="icon-phone2 visible-xs"><span class="icon-phone"></span></a>
+							<!-- logo of the page -->
+							<div class="logo">
+								<a href="#">
+									<img class="logo-home" src="images/logo-white.png" height="63" width="247" alt="LAW FIRM">
+									<img class="logo-img" src="images/logo.png" height="70" width="197" alt="LAW FIRM">
+								</a>
+							</div>
+						</div>
+						<div class="header-content text-right">
+							<a href="#" class="opener"><span class="icon-close"></span>close</a>
+							<div class="content-outer">
+								<div class="holder">
+									<ul class="top-nav">
+										<li class="tel"><a href="tel:1300009924" class="tel"><span class="icon-phone"></span> 1300 009 924</a></li>
+										<li class="email"><a href="#"><span class="icon-email"></span> Contact Us</a></li>
+										<li class="faq"><a href="#"><span class="icon-help-circled"></span> FAQS</a></li>
+										<li><a href="#"><span class="icon-user"></span> Login</a></li>
+									</ul>
+									<!-- nav2 of the page -->
+									<nav id="nav2">
+										<ul class="list-inline">
+											<li class="active ">
+												<a href="index.html">Inicio</a>
+											</li>
+											<li class=" "><a href="aboutus.html">Quienes somos</a></li>
+											<li class=" "><a href="#services">Servicios</a></li>
+											<li class=" "><a href="faq.html">Preguntas frecuentes</a></li>
+											<li class=" "><a href="contact.html">Contactenos</a></li>
+											@*<li class=" ">
+													<a href="blog.html">Blog</a>
+													<div class="small-drop add">
+														<div class="drop-holder">
+															<ul class="list-unstyled">
+																<li><a href="blog-details.html">blog-details</a></li>
+																<li><a href="blog-detail-sliderpost.html">blog detail slider post</a></li>
+																<li><a href="blog-detail-videopost.html">blog detail video post</a></li>
+																<li><a href="blog-detail-audiopost.html">blog detail audio post</a></li>
+																<li><a href="blog-detail-leftsidebar.html">blog detail left sidebar</a></li>
+																<li><a href="blog-detail-rightsidebar.html">blog detail right sidebar</a></li>
+																<li><a href="blog-detail-sidebar.html">blog detail sidebar</a></li>
+																<li><a href="blog-details-center-heading.html">blog details center heading</a></li>
+																<li><a href="blog-details-right-heading.html">blog details right heading</a></li>
+															</ul>
+														</div>
+													</div>
+												</li>
+												<li class="m-drop ">
+													<a href="#">Pages</a>
+													<div class="mega-drop">
+														<div class="drop-holder">
+															<div class="box">
+																<ul class="list-unstyled">
+																	<li><a href="events.html">events</a></li>
+																	<li><a href="event-details.html">event details</a></li>
+																	<li><a href="news.html">news</a></li>
+																	<li><a href="news-details.html">news details</a></li>
+																	<li><a href="testimonial.html">testimonial</a></li>
+																</ul>
+																<ul class="list-unstyled">
+																	<li><a href="services.html">services</a></li>
+																	<li><a href="team.html">team</a></li>
+																	<li><a href="team-details.html">team details</a></li>
+																	<li><a href="shortcodes.html">Short Codes</a></li>
+																	<li><a href="icons.html">icons</a></li>
+																</ul>
+															</div>
+															<div class="alignright">
+																<!-- picturefill html structure example -->
+																<a href="#">
+																	<span data-picture="" data-alt="image description">
+																		<span data-src="http://placehold.it/243x180" data-width="243" data-height="180"><img alt="image description" width="243" height="180" src="http://placehold.it/243x180"></span>
+																		<span data-src="http://placehold.it/243x180" data-width="243" data-height="180" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:1.5dppx)"></span> <!-- retina 2x desktop -->
+																		<!--[if (lt IE 9) & (!IEMobile)]>
+																			<span data-src="http://placehold.it/243x180"></span>
+																		<![endif]-->
+																		<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+																		<noscript>&lt;img src="http://placehold.it/243x180" width="243" height="180" alt="image description" &gt;</noscript>
+																	</span>
+																</a>
+															</div>
+														</div>
+													</div>
+												</li>*@
+										</ul>
+									</nav>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		@*<header id="header">
+				<div class="header-top">
+					<div class="container">
+						<div class="row">
+							<!--<div class="col-sm-4 col-md-3 tell-holder">
+								<span class="tel"><i class="fa fa-phone"></i>Llamenos: <a href="tel:11600419430041943">+54-11-60041943</a></span>
+							</div>-->
+							<div class="col-sm-8 col-md-6 col-md-push-3 col-lg-5 col-lg-push-4">
+								<!-- social-networks of the page -->
+								<ul class="social-networks list-inline">
+									<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+									<!--<li><a href="#"><i class="fa fa-twitter"></i></a></li>-->
+									<!--<li><a href="#"><i class="fa fa-tumblr"></i></a></li>-->
+									<!--<li><a href="#"><i class="fa fa-flickr"></i></a></li>-->
+									<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+									<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+									<!--<li><a href="#"><i class="fa fa-rss"></i></a></li>-->
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="container">
+					<div class="row header-row">
+						<div class="col-xs-6 holder">
+							<!-- logo of the page -->
+							<!--<div class="logo"><a href="#">Estudio Giacomelli</a></div>-->
+							<h1>ESTUDIO LOPEZ GIACOMELLI & Asociados</h1>
+							<a href="#" class="nav-opener visible-xs"><i class="fa fa-bars"></i></a>
+						</div>
+						<div class="col-xs-8 holder">
+							<ul class="inline">
+								<li><i class="fa fa-phone"></i>11-6198-0179(whatsapp)</li>
+								<br />
+								<li><i class="fa fa-envelope-o"></i> sebastianlopezgiacomelli@gmail.com</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</header>*@
+		<!-- main-gallery of the Page -->
+		<div class="main-gallery beans-gallery">
+			<div class="beans-mask">
+				<div class="beans-slideset">
+					<div class="beans-slide win-height">
+						<div class="container">
+							<div class="row">
+								<div class="col-xs-12 slide-content  win-min-height">
+									<header class="slide-heading2">
+										<h1>An unjust law is itself a species of violence. Arrest for its breach is more so.</h1>
+									</header>
+								</div>
+							</div>
+						</div>
+						<div class="bg-stretch">
+							<img src="images/img80.jpg" alt="image description">
+						</div>
+					</div>
+					<div class="beans-slide  win-height">
+						<div class="container">
+							<div class="row">
+								<div class="col-xs-12 slide-content  win-min-height">
+									<header class="slide-heading2">
+										<h1>if there were no bad people, there would be no good lawyers</h1>
+									</header>
+								</div>
+							</div>
+						</div>
+						<div class="bg-stretch">
+							<img src="images/img8.jpg" alt="image description">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="btn-box">
+				<a class="btn-prev" href="#"><i class="fa fa-angle-left"></i></a>
+				<a class="btn-next" href="#"><i class="fa fa-angle-right"></i></a>
+			</div>
+		</div>
+		<!-- contain main informative part of the site -->
+		<main id="main">
+			<!-- container-block of the page -->
+			<section id="services" class="container container-block">
+				<header class="row main-heading">
+					<div class="col-xs-12">
+						<h2>Servicios que brindamos</h2>
+					</div>
+				</header>
+				<!-- services-holder of the page -->
+				<div class="row services-holder">
+					<div class="col-sm-4 col-xs-12 services-col">
+						<div class="img-box"></div>
+						<h2><a href="services.html">Accidentes de tránsito</a></h2>
+						<p>
+							Inicio del reclamo en el seguro. Negociación extrajudicial y judicial.
+							Lesiones, Destrucción total, Poliza impaga, Redacción de cartas documento, etc.
+						</p>
+						<!--<a href="services.html" class="btn btn-default">Read More +</a>-->
+					</div>
+					<div class="col-sm-4 col-xs-12 services-col approch">
+						<div class="img-box"></div>
+						<h2><a href="services.html">Accidentes laborales y enfermedades profesionales</a></h2>
+						<p>Cálculo de indemnizaciones por incapacidad física, psiquica, daño moral, etc. Reclamo y representación en juicio ante ART.</p>
+					</div>
+					<div class="col-sm-4 col-xs-12 services-col rules">
+						<div class="img-box"></div>
+						<h2><a href="services.html">Despidos</a></h2>
+						<p>Redacción de telegramas, cartas documento. Demandas laborales. Confección de liquidaciones laborales. Asistencia a audiencias y representación en juicio</p>
+					</div>
+					<!--<div class="col-sm-3 col-xs-12 services-col client">
+						<div class="img-box"></div>
+						<h2><a href="services.html">Private Client</a></h2>
+						<p>Fusce comodo eros quis molestie blandit. Aliquam sollicitudin maximus metus ac ullamcorper.</p>
+						<a href="services.html" class="btn btn-default">Read More +</a>
+					</div>-->
+				</div>
+			</section>
+			<!-- container block practice of the page -->
+
+			<section class="container container-block practice">
+				<header class="row main-heading">
+					<div class="col-xs-12">
+						<h2>Areas de práctica</h2>
+					</div>
+				</header>
+
+				<div class="col-xs-12">
+					<h3>Accidentes de tránsito</h3>
+				</div>
+				<!-- practice-block of the page -->
+				<div class="row practice-block">
+					<div class="col-sm-4 col-xs-12 practice-col">
+						<a href="@Url.Action()">
+							<span data-picture="" data-alt="image description">
+								<span data-src="http://placehold.it/368x279" data-width="368" data-height="279"><img alt="image description" width="368" height="279" src="http://placehold.it/368x279"></span>
+								<span data-src="http://placehold.it/368x279" data-width="368" data-height="279" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:1.5dppx)"></span> <!-- retina 2x desktop -->
+								<!--[if (lt IE 9) & (!IEMobile)]>
+									<span data-src="http://placehold.it/368x279"></span>
+								<![endif]-->
+								<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+								<noscript>&lt;img src="http://placehold.it/368x279" width="368" height="279" alt="image description" &gt;</noscript>
+							</span>
+							<h3>Accidentes en transporte público</h3>
+							<div class="over">
+								<div class="box">
+									<div class="block">
+										<div class="frame">
+											<strong class="title">Accidentes en transporte público</strong>
+											<p>Accidentes en transporte público</p>
+											<span class="btn-read">[+]</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="col-sm-4 col-xs-12 practice-col">
+						<a href="practice-area.html">
+							<span data-picture="" data-alt="image description">
+								<span data-src="http://placehold.it/368x279" data-width="368" data-height="279"><img alt="image description" width="368" height="279" src="http://placehold.it/368x279"></span>
+								<span data-src="http://placehold.it/368x279" data-width="368" data-height="279" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:1.5dppx)"></span> <!-- retina 2x desktop -->
+								<!--[if (lt IE 9) & (!IEMobile)]>
+					<span data-src="http://placehold.it/368x279"></span>
+				<![endif]-->
+								<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+								<noscript>&lt;img src="http://placehold.it/368x279" width="368" height="279" alt="image description" &gt;</noscript>
+							</span>
+							<h3>Accidentes en auto</h3>
+							<div class="over">
+								<div class="box">
+									<div class="block">
+										<div class="frame">
+											<strong class="title">Accidentes en transporte público</strong>
+											<p>Accidentes en transporte público</p>
+											<span class="btn-read">[+]</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="col-sm-4 col-xs-12 practice-col">
+						<a href="practice-area.html">
+							<span data-picture="" data-alt="image description">
+								<span data-src="http://placehold.it/368x279" data-width="368" data-height="279"><img alt="image description" width="368" height="279" src="http://placehold.it/368x279"></span>
+								<span data-src="http://placehold.it/368x279" data-width="368" data-height="279" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:1.5dppx)"></span> <!-- retina 2x desktop -->
+								<!--[if (lt IE 9) & (!IEMobile)]>
+									<span data-src="http://placehold.it/368x279"></span>
+								<![endif]-->
+								<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+								<noscript>&lt;img src="http://placehold.it/368x279" width="368" height="279" alt="image description" &gt;</noscript>
+							</span>
+							<h3>Accidentes en moto</h3>
+							<div class="over">
+								<div class="box">
+									<div class="block">
+										<div class="frame">
+											<strong class="title">Family Law</strong>
+											<p>Curabitur mollis neque vel ligula congue convallis id tristique</p>
+											<span class="btn-read">[+]</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="row practice-block">
+					<div class="col-sm-4 col-xs-12 practice-col">
+						<a href="practice-area.html">
+							<span data-picture="" data-alt="image description">
+								<span data-src="http://placehold.it/368x279" data-width="368" data-height="279"><img alt="image description" width="368" height="279" src="http://placehold.it/368x279"></span>
+								<span data-src="http://placehold.it/368x279" data-width="368" data-height="279" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:1.5dppx)"></span> <!-- retina 2x desktop -->
+								<!--[if (lt IE 9) & (!IEMobile)]>
+									<span data-src="http://placehold.it/368x279"></span>
+								<![endif]-->
+								<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+								<noscript>&lt;img src="http://placehold.it/368x279" width="368" height="279" alt="image description" &gt;</noscript>
+							</span>
+							<h3>Accidente en bicicleta</h3>
+							<div class="over">
+								<div class="box">
+									<div class="block">
+										<div class="frame">
+											<strong class="title">Real Estate &amp; Land</strong>
+											<p>Curabitur mollis neque vel ligula congue convallis id tristique</p>
+											<span class="btn-read">[+]</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="col-sm-4 col-xs-12 practice-col">
+						<a href="practice-area.html">
+							<span data-picture="" data-alt="image description">
+								<span data-src="http://placehold.it/368x279" data-width="368" data-height="279"><img alt="image description" width="368" height="279" src="http://placehold.it/368x279"></span>
+								<span data-src="http://placehold.it/368x279" data-width="368" data-height="279" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:1.5dppx)"></span> <!-- retina 2x desktop -->
+								<!--[if (lt IE 9) & (!IEMobile)]>
+									<span data-src="http://placehold.it/368x279"></span>
+								<![endif]-->
+								<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+								<noscript>&lt;img src="http://placehold.it/368x279" width="368" height="279" alt="image description" &gt;</noscript>
+							</span>
+							<h3>Accidentes como acompañante</h3>
+							<div class="over">
+								<div class="box">
+									<div class="block">
+										<div class="frame">
+											<strong class="title">Business &amp; Financial</strong>
+											<p>Curabitur mollis neque vel ligula congue convallis id tristique</p>
+											<span class="btn-read">[+]</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="col-sm-4 col-xs-12 practice-col">
+						<a href="practice-area.html">
+							<span data-picture="" data-alt="image description">
+								<span data-src="http://placehold.it/368x279" data-width="368" data-height="279"><img alt="image description" width="368" height="279" src="http://placehold.it/368x279"></span>
+								<span data-src="http://placehold.it/368x279" data-width="368" data-height="279" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:1.5dppx)"></span> <!-- retina 2x desktop -->
+								<!--[if (lt IE 9) & (!IEMobile)]>
+									<span data-src="http://placehold.it/368x279"></span>
+								<![endif]-->
+								<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+								<noscript>&lt;img src="http://placehold.it/368x279" width="368" height="279" alt="image description" &gt;</noscript>
+							</span>
+							<h3>Accidentes como peatón</h3>
+							<div class="over">
+								<div class="box">
+									<div class="block">
+										<div class="frame">
+											<strong class="title">Family Law</strong>
+											<p>Curabitur mollis neque vel ligula congue convallis id tristique</p>
+											<span class="btn-read">[+]</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="row practice-block">
+					<div class="col-sm-4 col-xs-12 practice-col">
+						<a href="practice-area.html">
+							<span data-picture="" data-alt="image description">
+								<span data-src="http://placehold.it/368x279" data-width="368" data-height="279"><img alt="image description" width="368" height="279" src="http://placehold.it/368x279"></span>
+								<span data-src="http://placehold.it/368x279" data-width="368" data-height="279" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:1.5dppx)"></span> <!-- retina 2x desktop -->
+								<!--[if (lt IE 9) & (!IEMobile)]>
+									<span data-src="http://placehold.it/368x279"></span>
+								<![endif]-->
+								<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+								<noscript>&lt;img src="http://placehold.it/368x279" width="368" height="279" alt="image description" &gt;</noscript>
+							</span>
+							<h3>Chocó y no tenía pago su seguro</h3>
+							<div class="over">
+								<div class="box">
+									<div class="block">
+										<div class="frame">
+											<strong class="title">Real Estate &amp; Land</strong>
+											<p>Curabitur mollis neque vel ligula congue convallis id tristique</p>
+											<span class="btn-read">[+]</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="col-sm-4 col-xs-12 practice-col">
+						<a href="practice-area.html">
+							<span data-picture="" data-alt="image description">
+								<span data-src="http://placehold.it/368x279" data-width="368" data-height="279"><img alt="image description" width="368" height="279" src="http://placehold.it/368x279"></span>
+								<span data-src="http://placehold.it/368x279" data-width="368" data-height="279" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:1.5dppx)"></span> <!-- retina 2x desktop -->
+								<!--[if (lt IE 9) & (!IEMobile)]>
+									<span data-src="http://placehold.it/368x279"></span>
+								<![endif]-->
+								<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+								<noscript>&lt;img src="http://placehold.it/368x279" width="368" height="279" alt="image description" &gt;</noscript>
+							</span>
+							<h3>Destruccion total</h3>
+							<div class="over">
+								<div class="box">
+									<div class="block">
+										<div class="frame">
+											<strong class="title">Business &amp; Financial</strong>
+											<p>Curabitur mollis neque vel ligula congue convallis id tristique</p>
+											<span class="btn-read">[+]</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+				<br /><br /><br /><br />
+				<div class="col-xs-12">
+					<h3>Accidentes laborales/ART</h3>
+				</div>
+				<div class="row practice-block">
+					<div class="col-sm-4 col-xs-12 practice-col">
+						<a href="practice-area.html">
+							<span data-picture="" data-alt="image description">
+								<span data-src="http://placehold.it/368x279" data-width="368" data-height="279"><img alt="image description" width="368" height="279" src="http://placehold.it/368x279"></span>
+								<span data-src="http://placehold.it/368x279" data-width="368" data-height="279" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:1.5dppx)"></span> <!-- retina 2x desktop -->
+								<!--[if (lt IE 9) & (!IEMobile)]>
+									<span data-src="http://placehold.it/368x279"></span>
+								<![endif]-->
+								<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+								<noscript>&lt;img src="http://placehold.it/368x279" width="368" height="279" alt="image description" &gt;</noscript>
+							</span>
+							<h3>Accidentes en ocasión del trabajo</h3>
+							<div class="over">
+								<div class="box">
+									<div class="block">
+										<div class="frame">
+											<strong class="title">Family Law</strong>
+											<p>Curabitur mollis neque vel ligula congue convallis id tristique</p>
+											<span class="btn-read">[+]</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="col-sm-4 col-xs-12 practice-col">
+						<a href="practice-area.html">
+							<span data-picture="" data-alt="image description">
+								<span data-src="http://placehold.it/368x279" data-width="368" data-height="279"><img alt="image description" width="368" height="279" src="http://placehold.it/368x279"></span>
+								<span data-src="http://placehold.it/368x279" data-width="368" data-height="279" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:1.5dppx)"></span> <!-- retina 2x desktop -->
+								<!--[if (lt IE 9) & (!IEMobile)]>
+									<span data-src="http://placehold.it/368x279"></span>
+								<![endif]-->
+								<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+								<noscript>&lt;img src="http://placehold.it/368x279" width="368" height="279" alt="image description" &gt;</noscript>
+							</span>
+							<h3>Accidentes in itinere (camino al trabajo, o de regreso a casa)</h3>
+							<div class="over">
+								<div class="box">
+									<div class="block">
+										<div class="frame">
+											<strong class="title">Real Estate &amp; Land</strong>
+											<p>Curabitur mollis neque vel ligula congue convallis id tristique</p>
+											<span class="btn-read">[+]</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="col-sm-4 col-xs-12 practice-col">
+						<a href="practice-area.html">
+							<span data-picture="" data-alt="image description">
+								<span data-src="http://placehold.it/368x279" data-width="368" data-height="279"><img alt="image description" width="368" height="279" src="http://placehold.it/368x279"></span>
+								<span data-src="http://placehold.it/368x279" data-width="368" data-height="279" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:1.5dppx)"></span> <!-- retina 2x desktop -->
+								<!--[if (lt IE 9) & (!IEMobile)]>
+									<span data-src="http://placehold.it/368x279"></span>
+								<![endif]-->
+								<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+								<noscript>&lt;img src="http://placehold.it/368x279" width="368" height="279" alt="image description" &gt;</noscript>
+							</span>
+							<h3>Enfermedades profesionales</h3>
+							<div class="over">
+								<div class="box">
+									<div class="block">
+										<div class="frame">
+											<strong class="title">Business &amp; Financial</strong>
+											<p>Curabitur mollis neque vel ligula congue convallis id tristique</p>
+											<span class="btn-read">[+]</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+			</section>
+
+			<!-- news-block of the page -->
+			<section class="container container-block team">
+				<!-- our-team of the Page -->
+				<div class="row">
+					<div class="col-xs-12 team-contact add">
+						<h2>Contactenos</h2>
+						<!-- comments-form of the page -->
+						@using (Html.BeginForm("SendEmail", "Home", FormMethod.Post, new { @class = "comments-form add", @id = "contactForm" }))
+						{
+							<div class="form-row">
+								<div class="form-group">
+									<label for="name"><i class="fa fa-user"></i></label>
+									@Html.TextBoxFor(x => x.Name, new { @class = "form-control", @placeholder = "Nombre", @id = "name" })
+								</div>
+								<div class="form-group">
+									<label for="emailaddress"><i class="fa fa-envelope"></i></label>
+									@Html.TextBoxFor(x => x.EmailAddress, new { @class = "form-control", @placeholder = "Email", id = "emailaddress" })
+									@*@Html.ValidationMessageFor(m => m.EmailAddress)*@
+								</div>
+								<div class="form-group">
+									<label for="subject"><i class="fa fa-dribbble"></i></label>
+									@Html.TextBoxFor(x => x.Subject, new { @class = "form-control", @placeholder = "Asunto", id = "subject" })
+									@*@Html.ValidationMessageFor(m => m.Subject)*@
+								</div>
+							</div>
+							<div class="form-row textarea">
+								<div class="form-group">
+									<label for="message"><i class="fa fa-paper-plane"></i></label>
+									@Html.TextAreaFor(x => x.Message, new { @class = "form-control", @placeholder = "Mensaje ...", id = "message", @rows = "10", @cols = "30" })
+									@*@Html.ValidationMessageFor(m => m.Message)*@
+								</div>
+							</div>
+							<button class="btn btn-default" data-loading-text="<i class='icon-spinner icon-spin icon-large'></i>" type="submit">Enviar</button>
+
+						}
+						@*<div class="modal fade">
+								<div class="modal-dialog">
+									<div class="modal-content">
+										<div class="modal-header">
+											<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+											<h4 class="modal-title">Modal title</h4>
+										</div>
+										<div class="modal-body">
+											<p>One fine body…</p>
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+											<button type="button" class="btn btn-primary">Save changes</button>
+										</div>
+									</div><!-- /.modal-content -->
+								</div><!-- /.modal-dialog -->
+							</div>*@
+
+					</div>
+				</div>
+
+			</section>
+
+
+
+		</main>
+		<!-- footer-holder of the Page -->
+		<div class="container footer-holder">
+			<aside class="row aside-block">
+				<!--<section class="col-sm-6 col-md-3 col-xs-12 column">
+					<h2>Estudio Giacomelli</h2>
+					<p>
+						Representamos y defendemos al trabajador en el ámbito de C.A.B.A. y provincia de Buenos Aires
+
+						(011) 4374-8111 (lu. a vie. 10 a 18 hs)
+						(011) 11-3593-3331 (whatsapp online 24hs.)
+						info@estudiocavadini.com.ar
+					</p>
+					<a href="#" class="read-more">Read More »</a>
+					<h3>Email Newsletters:</h3>
+					<form action="#" class="email-form">
+						<div class="form-group">
+							<input type="email" class="form-control" placeholder="Enter Address">
+							<button type="submit" class="btn btn-default"><i class="fa fa-envelope"></i></button>
+						</div>
+					</form>
+					<a class="privacy" href="#">Privacy Policy</a>
+				</section>-->
+				<!--<section class="col-sm-6 col-md-3 col-xs-12 column new-col clearfix-sm">
+					<h2>Twitter Widget</h2>
+					<div class="news-articles twitter">
+						<div class="news-column">
+							<i class="fa fa-twitter-square"></i>
+							<div class="txt-box">
+								<p>Raritas ess dynamicus, qui sequitur mutationem <a href="#">http://t.co/hVtABj5tZo</a></p>
+								<time datetime="2015-01-01"><a href="#">23 seconds ago</a></time>
+							</div>
+						</div>
+						<div class="news-column">
+							<i class="fa fa-twitter-square"></i>
+							<div class="txt-box">
+								<p>Duis autem vel eum #iriure dolor in hendrerit in vulputate velit</p>
+								<time datetime="2015-01-01"><a href="#">8 months ago</a></time>
+							</div>
+						</div>
+						<div class="news-column">
+							<i class="fa fa-twitter-square"></i>
+							<div class="txt-box">
+								<p@@frankdoe am liber tempor cum soluta nobis eleifend</p>
+								<time datetime="2015-01-01"><a href="#">2 years ago</a></time>
+							</div>
+						</div>
+					</div>
+				</section>-->
+				<section class="col-sm-6 col-md-3 col-xs-12 column new-col">
+					<h2>Contactenos</h2>
+					<div class="news-articles address">
+						<div class="news-column">
+							<span class="txt">Dirección:</span>
+							<address class="address-box">Gorriti 300,Capital Federal, Argentina</address>
+						</div>
+						<div class="news-column">
+							<span class="txt">Teléfono:</span>
+							<address class="address-box">
+								<a class="tel" href="tel:440875369208">+440 875369208</a> - Office
+								<br>
+								<!--<a href="mailo:&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#064;&#115;&#105;&#116;&#101;&#110;&#097;&#109;&#101;&#046;&#099;&#111;&#109;">&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#064;&#115;&#105;&#116;&#101;&#110;&#097;&#109;&#101;&#046;&#099;&#111;&#109;</a>-->
+								<a href="mailo:sebastianlopez@gmail.com">sebastianlopez@gmail.com</a>
+							</address>
+						</div>
+						<div class="news-column">
+							<span class="txt">Siganos:</span>
+							<ul class="footer-socials list-inline">
+								<li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
+								<li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+								<li><a href="#"><i class="fa fa-google-plus-square"></i></a></li>
+							</ul>
+						</div>
+					</div>
+				</section>
+			</aside>
+		</div>
+		<!-- footer of the Page -->
+		<footer id="footer">
+			<div class="container holder">
+				<div class="row">
+					<div class="col-sm-5 col-xs-12 copyrights">
+						<p>&copy; Copyrights Reserved To <a href="www.htmlbeans.com">HTML BEANS</a>.</p>
+					</div>
+					<!--<div class="col-sm-7 col-xs-12 copyrights">
+						<ul class="footer-nav list-inline">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="aboutus.html">About Us</a></li>
+							<li><a href="practice-area.html">Practise</a></li>
+							<li><a href="services.html">Services</a></li>
+							<li><a href="testimonial.html">Testimonial</a></li>
+							<li><a href="blog.html">Blog</a></li>
+							<li><a href="team.html">team</a></li>
+							<li><a href="contactus.html">Contact Us</a></li>
+						</ul>
+					</div>-->
+				</div>
+			</div>
+		</footer>
+		<div class="pre-loader"><span class="preloader1"></span></div>
+		<div class="popup-holder">
+			<div id="video-popup1" class="lightbox video-lightbox videoarea">
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/x1Q5vbAV9yo" frameborder="0" allowfullscreen></iframe>
+			</div>
+		</div>
+	</div>
+	<!-- include jQuery -->
+	<script src="@Url.Content("~/js/jquery-1.11.2.min.js")" type="text/javascript"></script>
+	<script src="@Url.Content("~/js/jquery-ui-1.10.4.min.js")" type="text/javascript"></script>
+	<script src="@Url.Content("~/js/bootstrap.min.js")" type="text/javascript"></script>
+	<script src="@Url.Content("~/js/bootstrap-dialog.min.js")" type="text/javascript"></script>
+	<script src="@Url.Content("~/js/jquery.main.js")" type="text/javascript"></script>
+	<script src="@Url.Content("~/js/jquery.datepicker.js")" type="text/javascript"></script>
+	<script src="@Url.Content("~/Scripts/jquery.validate.js")" type="text/javascript"></script>
+	@*<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.js")" type="text/javascript"></script>*@
+
+
+
+	<script type="text/javascript">
+		$(document).ready(function ()
+		{
+			$('.input-validation-error').parents('.form-group').addClass('has-error');
+			$('.field-validation-error').addClass('text-danger');
+		});
+	</script>
+
+	@*<script type="text/javascript">
+			if (navigator.userAgent.match(/IEMobile\/10\.0/) || navigator.userAgent.match(/MSIE 10.*Touch/))
+			{
+				var msViewportStyle = document.createElement('style')
+				msViewportStyle.appendChild(
+					document.createTextNode(
+						'@@-ms-viewport{width:auto !important}'
+					)
+				)
+				document.querySelector('head').appendChild(msViewportStyle)
+			}
+		</script>*@
+
+
+	<script type="text/javascript">
+		$(document).ready(function ()
+		{
+			$('#contactForm').submit(function ()
+			{
+				$('#contactForm').validate({
+					rules: {
+						Name: {
+							minlength: 2,
+							required: true
+						},
+						EmailAddress: {
+							required: true,
+							email: true
+						},
+						Message: {
+							minlength: 2,
+							required: true
+						},
+						Subject: {
+							required: true
+						}
+					},
+					messages: {
+						Name: "Por favor escriba su nombre",
+						EmailAddress: {
+							required: "Por favor ingrese su email",
+							email: "Su email debe tener el formato nombre@dominio.com"
+						}
+					},
+					highlight: function (element)
+					{
+						$(element).closest('.control-group').removeClass('success').addClass('error');
+					},
+					success: function (element)
+					{
+						element.text('OK!').addClass('valid')
+							.closest('.control-group').removeClass('error').addClass('success');
+					}
+				});
+
+
+				if ($("#contactForm").valid())
+				{
+					var data = JSON.stringify({
+						Name: $('#name').val(),
+						EmailAddress: $('#emailaddress').val(),
+						Subject: $('#subject').val(),
+						Message: $('#message').val()
+					});
+
+					$.ajax({
+						url: '@Url.Action("SendEmail")',
+						type: "POST",
+						dataType: "json",
+						contentType: "application/json; charset=utf-8",
+						data: data,
+						success: function (result)
+						{
+							$("#name").val("");
+							$("#emailaddress").val("");
+							$("#subject").val("");
+							$("#message").val("");
+
+							BootstrapDialog.alert('Su mensaje ha sido enviado, gracias por su consulta!');
+						},
+						error: function (result)
+						{
+							//alert("Failed");
+						}
+					});
+
+					return false;
+				}
+				else
+				{
+					return false;
+				}
+			});
+		});
+
+	</script>
+
+
+</body>
+</html>
