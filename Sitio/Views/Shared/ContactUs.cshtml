@@ -26,11 +26,11 @@
 				<div class="form-row">
 					<div class="form-group">
 						<label for="name"><i class="fa fa-user"></i></label>
-						@Html.TextBoxFor(x => x.Name, new { @class = "form-control", @placeholder = "Nombre", @id = "name", required = "required", type = "text", data_minlength = "3" })
+						@Html.TextBoxFor(x => x.Name, new { @class = "form-control", @placeholder = "Nombre *", @id = "name", required = "required", type = "text", data_minlength = "3" })
 					</div>
 					<div class="form-group">
 						<label for="emailaddress"><i class="fa fa-envelope"></i></label>
-						@Html.TextBoxFor(x => x.EmailAddress, new { @class = "form-control", @placeholder = "Email", id = "emailaddress", required = "required", type = "email", @data_error = "email inválido" })
+						@Html.TextBoxFor(x => x.EmailAddress, new { @class = "form-control", @placeholder = "Email *", id = "emailaddress", required = "required", type = "email", @data_error = "email inválido" })
 					</div>
 					<div class="form-group">
 						<label for="telephone"><i class="fa fa-phone"></i></label>
@@ -42,13 +42,13 @@
 				<div class="form-row">
 					<div class="form-group">
 						<label for="subject"><i class="fa fa-dribbble"></i></label>
-						@Html.TextBoxFor(x => x.Subject, new { @class = "form-control", @placeholder = "Asunto", id = "subject" })
+						@Html.TextBoxFor(x => x.Subject, new { @class = "form-control", @placeholder = "Asunto *", id = "subject" })
 					</div>
 				</div>
 				<div class="form-row textarea">
 					<div class="form-group">
 						<label for="message"><i class="fa fa-paper-plane"></i></label>
-						@Html.TextAreaFor(x => x.Message, new { @class = "form-control", @placeholder = "Mensaje ...", id = "message", @rows = "10", @cols = "30", required = "required" })
+						@Html.TextAreaFor(x => x.Message, new { @class = "form-control", @placeholder = "Mensaje ... *", id = "message", @rows = "10", @cols = "30", required = "required" })
 					</div>
 				</div>
 

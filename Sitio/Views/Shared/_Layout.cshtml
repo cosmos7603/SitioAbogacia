@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<!-- set the viewport width and initial-scale on mobile devices -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>LAW FIRM</title>
+	<title>ESTUDIO LOPEZ GIACOMELLI Y ASOC</title>
 	<!-- include the site stylesheet -->
 	@Styles.Render("~/css/font-awesome.min.css")
 	@Styles.Render("~/css/fancybox.css")
@@ -65,8 +65,8 @@
 	<script src="@Url.Content("~/scripts/bootstrap.min.js")" type="text/javascript"></script>
 	<script src="@Url.Content("~/scripts/bootstrap-dialog.min.js")" type="text/javascript"></script>
 	<script src="@Url.Content("~/scripts/jquery.main.js")" type="text/javascript"></script>
-	<script src="@Url.Content("~/scripts/jquery.datepicker.js")" type="text/javascript"></script>
-	<script src="@Url.Content("~/Scripts/validator.min.js")" type="text/javascript"></script>
+	@*<script src="@Url.Content("~/scripts/jquery.datepicker.js")" type="text/javascript"></script>
+	<script src="@Url.Content("~/Scripts/validator.min.js")" type="text/javascript"></script>*@
 
 	<script type="text/javascript">
 		if (navigator.userAgent.match(/IEMobile\/10\.0/) || navigator.userAgent.match(/MSIE 10.*Touch/))
@@ -110,10 +110,11 @@
 						Name: $('#name').val(),
 						EmailAddress: $('#emailaddress').val(),
 						Subject: $('#subject').val(),
-						Message: $('#message').val()
+						Message: $('#message').val(),
+						Telephone: $('#telephone').val()
 					});
 					$.ajax({
-						url: '@Url.Action("SendEmail", "Home")',
+						url: '@Url.Action("SendEmail", "ContactUs")',
 						type: "POST",
 						dataType: "json",
 						contentType: "application/json; charset=utf-8",
@@ -124,6 +125,7 @@
 							$("#emailaddress").val("");
 							$("#subject").val("");
 							$("#message").val("");
+							$("#telephone").val("");
 							$("#success-alert").fadeTo(2000, 500).slideUp(500, function ()
 							{
 								$("#success-alert").slideUp(500);
@@ -141,7 +143,7 @@
 						{
 							BootstrapDialog.show(
 							{
-								message: 'Ha habido un error en el envio, intente mas tarde por favor, o escriba directamente a sebastianlopezgiacomelli@gmail.com',
+								message: 'Ha habido un error en el envio, intente mas tarde por favor, o escriba directamente a estudiolopezgiacomelli@gmail.com',
 								title: 'Información',
 								type: BootstrapDialog.TYPE_ERROR
 							}

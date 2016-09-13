@@ -82,7 +82,7 @@
 			<div class="col-sm-6 col-xs-12 services-col">
 				<div class="img-box"></div>
 				<h2>
-					<a href="#">Accidentes de tránsito</a>
+					Accidentes de tránsito
 				</h2>
 				<p>
 					Inicio del reclamo en el seguro. Negociación extrajudicial y judicial.
@@ -93,21 +93,11 @@
 			<div class="col-sm-6 col-xs-12 services-col approch">
 				<div class="img-box"></div>
 				<h2>
-					<a href="services.html">Accidentes laborales y enfermedades profesionales</a>
+					Accidentes laborales y enfermedades profesionales
 				</h2>
 				<p>Cálculo de indemnizaciones por incapacidad física, psiquica, daño moral, etc. Reclamo y representación en juicio ante ART.</p>
 			</div>
-			@*<div class="col-sm-4 col-xs-12 services-col rules">
-					<div class="img-box"></div>
-					<h2><a href="services.html">Despidos</a></h2>
-					<p>Redacción de telegramas, cartas documento. Demandas laborales. Confección de liquidaciones laborales. Asistencia a audiencias y representación en juicio</p>
-				</div>*@
-			<!--<div class="col-sm-3 col-xs-12 services-col client">
-				<div class="img-box"></div>
-				<h2><a href="services.html">Private Client</a></h2>
-				<p>Fusce comodo eros quis molestie blandit. Aliquam sollicitudin maximus metus ac ullamcorper.</p>
-				<a href="services.html" class="btn btn-default">Read More +</a>
-			</div>-->
+
 		</div>
 	</section>
 	<!-- container block practice of the page -->
@@ -127,15 +117,15 @@
 			<div class="col-sm-4 col-xs-12 practice-col">
 				<a href="@Url.Action("Index", "Services", new {service = "accidentesEnTransportePublico"})">
 					<span data-picture="" data-alt="image description">
-						<span data-src="/SitioAbogacia/images/publico.jpg" data-width="368" data-height="279">
-							<img alt="image description" width="368" height="279" src="/SitioAbogacia/images/publico.jpg">
+						<span data-src="@Url.Content("~/images/publico.jpg")" data-width="368" data-height="279">
+							<img alt="image description" width="368" height="279" src="@Url.Content("~/images/publico.jpg")">
 						</span>
-						<span data-src="/SitioAbogacia/images/publico.jpg" data-width="368" data-height="279" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:1.5dppx)"></span> <!-- retina 2x desktop -->
+						<span data-src="@Url.Content("~/images/publico.jpg")" data-width="368" data-height="279" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:1.5dppx)"></span> <!-- retina 2x desktop -->
 						<!--[if (lt IE 9) & (!IEMobile)]>
-							<span data-src="/SitioAbogacia/images/publico.jpg"></span>
+							<span data-src="@Url.Content("~/images/publico.jpg")"></span>
 						<![endif]-->
 						<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
-						<noscript>&lt;img src="/SitioAbogacia/images/publico.jpg" width="368" height="279" alt="image description" &gt;</noscript>
+						<noscript>&lt;img src="@Url.Content("~/images/publico.jpg")" width="368" height="279" alt="image description" &gt;</noscript>
 					</span>
 					<h3>Accidentes en transporte público</h3>
 					<div class="over">
@@ -153,15 +143,15 @@
 			</div>
 			<div class="col-sm-4 col-xs-12 practice-col">
 				<a href="@Url.Action("Index", "Services", new {service = "accidentesEnAuto"})">
-					<span data-src="/SitioAbogacia/images/transito.jpg" data-width="368" data-height="279">
-						<img alt="image description" width="368" height="279" src="/SitioAbogacia/images/transito.jpg">
+					<span data-src="@Url.Content("~/images/transito.jpg")" data-width="368" data-height="279">
+						<img alt="image description" width="368" height="279" src="@Url.Content("~/images/transito.jpg")">
 					</span>
-					<span data-src="/SitioAbogacia/images/transito.jpg" data-width="368" data-height="279" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:1.5dppx)"></span> <!-- retina 2x desktop -->
+					<span data-src="@Url.Content("~/images/transito.jpg")" data-width="368" data-height="279" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:1.5dppx)"></span> <!-- retina 2x desktop -->
 					<!--[if (lt IE 9) & (!IEMobile)]>
-						<span data-src="http://placehold.it/368x279"></span>
+						<span data-src="@Url.Content("~/images/transito.jpg")"></span>
 					<![endif]-->
 					<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
-					<noscript>&lt;img src="/SitioAbogacia/images/img80.jpg" width="368" height="279" alt="image description" &gt;</noscript>
+					<noscript>&lt;img src="@Url.Content("~/images/transito.jpg")" width="368" height="279" alt="image description" &gt;</noscript>
 					<h3>Accidentes en auto</h3>
 					<div class="over">
 						<div class="box">
@@ -177,15 +167,15 @@
 			</div>
 			<div class="col-sm-4 col-xs-12 practice-col">
 				<a href="@Url.Action("Index", "Services", new {service = "accidentesEnMoto"})">
-					<span data-src="/SitioAbogacia/images/transito.jpg" data-width="368" data-height="279">
-						<img alt="image description" width="368" height="279" src="/SitioAbogacia/images/moto.jpg">
+					<span data-src="@Url.Content("~/images/moto.jpg")" data-width="368" data-height="279">
+						<img alt="image description" width="368" height="279" src="@Url.Content("~/images/moto.jpg")">
 					</span>
-					<span data-src="/SitioAbogacia/images/moto.jpg" data-width="368" data-height="279" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:1.5dppx)"></span> <!-- retina 2x desktop -->
+					<span data-src="@Url.Content("~/images/moto.jpg")" data-width="368" data-height="279" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:1.5dppx)"></span> <!-- retina 2x desktop -->
 					<!--[if (lt IE 9) & (!IEMobile)]>
-						<span data-src="/SitioAbogacia/images/moto.jpg"></span>
+						<span data-src="@Url.Content("~/images/moto.jpg")"></span>
 					<![endif]-->
 					<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
-					<noscript>&lt;img src="/SitioAbogacia/images/moto.jpg" width="368" height="279" alt="image description" &gt;</noscript>
+					<noscript>&lt;img src="~/images/moto.jpg" width="368" height="279" alt="image description" &gt;</noscript>
 					<h3>Accidentes en moto</h3>
 					<div class="over">
 						<div class="box">
@@ -204,13 +194,13 @@
 			<div class="col-sm-4 col-xs-12 practice-col">
 				<a href="@Url.Action("Index", "Services", new {service = "accidentesEnBicicleta"})">
 					<span data-picture="" data-alt="image description">
-						<span data-src="/SitioAbogacia/images/accidentebici.jpg" data-width="368" data-height="279"><img alt="image description" width="368" height="279" src="http://placehold.it/368x279"></span>
-						<span data-src="/SitioAbogacia/images/accidentebici.jpg" data-width="368" data-height="279" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:1.5dppx)"></span> <!-- retina 2x desktop -->
+						<span data-src="@Url.Content("~/images/accidentebici.jpg")" data-width="368" data-height="279"><img alt="image description" width="368" height="279" src="@Url.Content("~/images/accidentebici.jpg")"></span>
+						<span data-src="@Url.Content("~/images/accidentebici.jpg")" data-width="368" data-height="279" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:1.5dppx)"></span> <!-- retina 2x desktop -->
 						<!--[if (lt IE 9) & (!IEMobile)]>
-							<span data-src="/SitioAbogacia/images/accidentebici.jpg"></span>
+							<span data-src="@Url.Content("~/images/accidentebici.jpg")"></span>
 						<![endif]-->
 						<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
-						<noscript>&lt;img src="/SitioAbogacia/images/accidentebici.jpg" width="368" height="279" alt="image description" &gt;</noscript>
+						<noscript>&lt;img src="@Url.Content("~/images/accidentebici.jpg")" width="368" height="279" alt="image description" &gt;</noscript>
 					</span>
 					<h3>Accidentes en bicicleta</h3>
 					<div class="over">
@@ -228,13 +218,13 @@
 			<div class="col-sm-4 col-xs-12 practice-col">
 				<a href="@Url.Action("Index", "Services", new {service = "accidentesComoAcompanantes"})">
 					<span data-picture="" data-alt="image description">
-						<span data-src="/SitioAbogacia/images/acompanante.jpg" data-width="368" data-height="279"><img alt="image description" width="368" height="279" src="http://placehold.it/368x279"></span>
-						<span data-src="/SitioAbogacia/images/acompanante.jpg" data-width="368" data-height="279" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:1.5dppx)"></span> <!-- retina 2x desktop -->
+						<span data-src="@Url.Content("~/images/acompanante.jpg")" data-width="368" data-height="279"><img alt="image description" width="368" height="279" src="@Url.Content("~/images/acompanante.jpg")"></span>
+						<span data-src="@Url.Content("~/images/acompanante.jpg")" data-width="368" data-height="279" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:1.5dppx)"></span> <!-- retina 2x desktop -->
 						<!--[if (lt IE 9) & (!IEMobile)]>
-							<span data-src="/SitioAbogacia/images/acompanante.jpg"></span>
+							<span data-src="@Url.Content("~/images/acompanante.jpg")"></span>
 						<![endif]-->
 						<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
-						<noscript>&lt;img src="/SitioAbogacia/images/acompanante.jpg" width="368" height="279" alt="image description" &gt;</noscript>
+						<noscript>&lt;img src="@Url.Content("~/images/acompanante.jpg")" width="368" height="279" alt="image description" &gt;</noscript>
 					</span>
 					<h3>Accidentes como acompañante</h3>
 					<div class="over">
@@ -251,15 +241,15 @@
 			</div>
 			<div class="col-sm-4 col-xs-12 practice-col">
 				<a href="@Url.Action("Index", "Services", new {service = "accidentesComoPeaton"})">
-					<span data-src="/SitioAbogacia/images/peatones.jpg" data-width="368" data-height="279">
-						<img alt="image description" width="368" height="279" src="/SitioAbogacia/images/peatones.jpg">
+					<span data-src="@Url.Content("~/images/peatones.jpg")" data-width="368" data-height="279">
+						<img alt="image description" width="368" height="279" src="@Url.Content("~/images/peatones.jpg")">
 					</span>
-					<span data-src="/SitioAbogacia/images/peatones.jpg" data-width="368" data-height="279" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:1.5dppx)"></span> <!-- retina 2x desktop -->
+					<span data-src="@Url.Content("~/images/peatones.jpg")" data-width="368" data-height="279" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:1.5dppx)"></span> <!-- retina 2x desktop -->
 					<!--[if (lt IE 9) & (!IEMobile)]>
-						<span data-src="/SitioAbogacia/images/peatones.jpg"></span>
+						<span data-src="~/images/peatones.jpg"></span>
 					<![endif]-->
 					<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
-					<noscript>&lt;img src="/SitioAbogacia/images/peatones.jpg" width="368" height="279" alt="image description" &gt;</noscript>
+					<noscript>&lt;img src="@Url.Content("~/images/peatones.jpg")" width="368" height="279" alt="image description" &gt;</noscript>
 					<h3>Accidentes como peatón</h3>
 					<div class="over">
 						<div class="box">
@@ -278,13 +268,13 @@
 			<div class="col-sm-4 col-xs-12 practice-col">
 				<a href="@Url.Action("Index", "Services", new {service = "choqueSinSeguro"})">
 					<span data-picture="" data-alt="image description">
-						<span data-src="/SitioAbogacia/images/chocoynoteniaseguro.jpg" data-width="368" data-height="279"><img alt="image description" width="368" height="279" src="http://placehold.it/368x279"></span>
-						<span data-src="/SitioAbogacia/images/chocoynoteniaseguro.jpg" data-width="368" data-height="279" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:1.5dppx)"></span> <!-- retina 2x desktop -->
+						<span data-src="@Url.Content("~/images/chocoynoteniaseguro.jpg")" data-width="368" data-height="279"><img alt="image description" width="368" height="279" src="@Url.Content("~/images/chocoynoteniaseguro.jpg")"></span>
+						<span data-src="@Url.Content("~/images/chocoynoteniaseguro.jpg")" data-width="368" data-height="279" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:1.5dppx)"></span> <!-- retina 2x desktop -->
 						<!--[if (lt IE 9) & (!IEMobile)]>
-							<span data-src="/SitioAbogacia/images/chocoynoteniaseguro.jpg"></span>
+							<span data-src="@Url.Content("~/images/chocoynoteniaseguro.jpg")"></span>
 						<![endif]-->
 						<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
-						<noscript>&lt;img src="/SitioAbogacia/images/chocoynoteniaseguro.jpg" width="368" height="279" alt="image description" &gt;</noscript>
+						<noscript>&lt;img src="@Url.Content("~/images/chocoynoteniaseguro.jpg")" width="368" height="279" alt="image description" &gt;</noscript>
 					</span>
 					<h3>Chocó y no tenía pago su seguro</h3>
 					<div class="over">
@@ -302,20 +292,20 @@
 			<div class="col-sm-4 col-xs-12 practice-col">
 				<a href="@Url.Action("Index", "Services", new {service = "destruccionTotal"})">
 					<span data-picture="" data-alt="image description">
-						<span data-src="/SitioAbogacia/images/destrucciontotal.jpg" data-width="368" data-height="279"><img alt="image description" width="368" height="279" src="http://placehold.it/368x279"></span>
-						<span data-src="/SitioAbogacia/images/destrucciontotal.jpg" data-width="368" data-height="279" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:1.5dppx)"></span> <!-- retina 2x desktop -->
+						<span data-src="@Url.Content("~/images/destrucciontotal.jpg")" data-width="368" data-height="279"><img alt="image description" width="368" height="279" src="@Url.Content("~/images/destrucciontotal.jpg")"></span>
+						<span data-src="@Url.Content("~/images/destrucciontotal.jpg")" data-width="368" data-height="279" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:1.5dppx)"></span> <!-- retina 2x desktop -->
 						<!--[if (lt IE 9) & (!IEMobile)]>
-							<span data-src="/SitioAbogacia/images/destrucciontotal.jpg"></span>
+							<span data-src="@Url.Content("~/images/destrucciontotal.jpg")"></span>
 						<![endif]-->
 						<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
-						<noscript>&lt;img src="/SitioAbogacia/images/destrucciontotal.jpg" width="368" height="279" alt="image description" &gt;</noscript>
+						<noscript>&lt;img src="@Url.Content("~/images/destrucciontotal.jpg")" width="368" height="279" alt="image description" &gt;</noscript>
 					</span>
 					<h3>Destruccion total</h3>
 					<div class="over">
 						<div class="box">
 							<div class="block">
 								<div class="frame">
-									<strong class="title">Destruccion total</strong>
+									<strong class="title">Destrucción total</strong>
 									<span class="btn-read">[+]</span>
 								</div>
 							</div>
@@ -332,13 +322,13 @@
 			<div class="col-sm-4 col-xs-12 practice-col">
 				<a href="@Url.Action("Index", "Services", new {service = "accidentesDeTrabajo"})">
 					<span data-picture="" data-alt="image description">
-						<span data-src="/SitioAbogacia/images/accidentelaboral.jpg" data-width="368" data-height="279"><img alt="image description" width="368" height="279" src="http://placehold.it/368x279"></span>
-						<span data-src="/SitioAbogacia/images/accidentelaboral.jpg" data-width="368" data-height="279" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:1.5dppx)"></span> <!-- retina 2x desktop -->
+						<span data-src="@Url.Content("~/images/accidentelaboral.jpg")" data-width="368" data-height="279"><img alt="image description" width="368" height="279" src="@Url.Content("~/images/accidentelaboral.jpg")"></span>
+						<span data-src="@Url.Content("~/images/accidentelaboral.jpg")" data-width="368" data-height="279" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:1.5dppx)"></span> <!-- retina 2x desktop -->
 						<!--[if (lt IE 9) & (!IEMobile)]>
-							<span data-src="/SitioAbogacia/images/accidentelaboral.jpg"></span>
+							<span data-src="@Url.Content("~/images/accidentelaboral.jpg")"></span>
 						<![endif]-->
 						<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
-						<noscript>&lt;img src="/SitioAbogacia/images/accidentelaboral.jpg" width="368" height="279" alt="image description" &gt;</noscript>
+						<noscript>&lt;img src="@Url.Content("~/images/accidentelaboral.jpg")" width="368" height="279" alt="image description" &gt;</noscript>
 					</span>
 					<h3>Accidentes en ocasión del trabajo</h3>
 					<div class="over">
@@ -356,13 +346,13 @@
 			<div class="col-sm-4 col-xs-12 practice-col">
 				<a href="@Url.Action("Index", "Services", new {service = "accidentesInItinere"})">
 					<span data-picture="" data-alt="image description">
-						<span data-src="/SitioAbogacia/images/initinere.jpg" data-width="368" data-height="279"><img alt="image description" width="368" height="279" src="http://placehold.it/368x279"></span>
-						<span data-src="/SitioAbogacia/images/initinere.jpg" data-width="368" data-height="279" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:1.5dppx)"></span> <!-- retina 2x desktop -->
+						<span data-src="@Url.Content("~/images/initinere.jpg")" data-width="368" data-height="279"><img alt="image description" width="368" height="279" src="@Url.Content("~/images/initinere.jpg")"></span>
+						<span data-src="@Url.Content("~/images/initinere.jpg")" data-width="368" data-height="279" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:1.5dppx)"></span> <!-- retina 2x desktop -->
 						<!--[if (lt IE 9) & (!IEMobile)]>
-							<span data-src="/SitioAbogacia/images/initinere.jpg"></span>
+							<span data-src="@Url.Content("~/images/initinere.jpg")"></span>
 						<![endif]-->
 						<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
-						<noscript>&lt;img src="/SitioAbogacia/images/initinere.jpg" width="368" height="279" alt="image description" &gt;</noscript>
+						<noscript>&lt;img src="@Url.Content("~/images/initinere.jpg")" width="368" height="279" alt="image description" &gt;</noscript>
 					</span>
 					<h3>Accidentes in itinere (camino al trabajo, o de regreso a casa)</h3>
 					<div class="over">
@@ -380,13 +370,13 @@
 			<div class="col-sm-4 col-xs-12 practice-col">
 				<a href="@Url.Action("Index", "Services", new {service = "enfermedadesProfesionales"})">
 					<span data-picture="" data-alt="image description">
-						<span data-src="/SitioAbogacia/images/enfermedadlaboral.jpg" data-width="368" data-height="279"><img alt="image description" width="368" height="279" src="http://placehold.it/368x279"></span>
-						<span data-src="/SitioAbogacia/images/enfermedadlaboral.jpg" data-width="368" data-height="279" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:1.5dppx)"></span> <!-- retina 2x desktop -->
+						<span data-src="@Url.Content("~/images/enfermedadlaboral.jpg")" data-width="368" data-height="279"><img alt="image description" width="368" height="279" src="@Url.Content("~/images/enfermedadlaboral.jpg")"></span>
+						<span data-src="@Url.Content("~/images/enfermedadlaboral.jpg")" data-width="368" data-height="279" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:1.5dppx)"></span> <!-- retina 2x desktop -->
 						<!--[if (lt IE 9) & (!IEMobile)]>
-							<span data-src="/SitioAbogacia/images/enfermedadlaboral.jpg"></span>
+							<span data-src="@Url.Content("~/images/enfermedadlaboral.jpg")"></span>
 						<![endif]-->
 						<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
-						<noscript>&lt;img src="/SitioAbogacia/images/enfermedadlaboral.jpg" width="368" height="279" alt="image description" &gt;</noscript>
+						<noscript>&lt;img src="@Url.Content("~/images/enfermedadlaboral.jpg")" width="368" height="279" alt="image description" &gt;</noscript>
 					</span>
 					<h3>Enfermedades profesionales</h3>
 					<div class="over">

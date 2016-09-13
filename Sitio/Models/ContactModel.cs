@@ -15,6 +15,7 @@ namespace Sitio.Models
 		[Required, Display(Name = "Mensaje")]
 		public string Message { get; set; }
 
+		[Required, Display(Name = "Teléfono")]
 		public string Telephone { get; set; }
     }
 }
